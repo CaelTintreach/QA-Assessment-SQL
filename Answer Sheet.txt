@@ -1,0 +1,31 @@
+1.	SELECT * FROM actor;
+2.	SELECT * FROM actor WHERE first_name = 'JOHN';
+3.	SELECT * FROM actor WHERE last_name = ‘NEESON’;
+1.	SELECT * FROM actor WHERE MOD(actor_id, 10)=0;
+2.	SELECT film_id, description FROM film WHERE film_id = 100;
+3.	SELECT title, rating FROM film WHERE rating = 'R';
+4.	SELECT title, rating FROM film WHERE rating != 'R';
+5.	SELECT title, length FROM film WHERE length IS NOT NULL ORDER BY length ASC LIMIT 10;
+6.	SELECT title FROM film WHERE length IS NOT NULL ORDER BY length ASC LIMIT 10;
+7.	SELECT * FROM film WHERE special_features = 'Deleted Scenes';
+8.	SELECT DISTINCT last_name FROM actor;
+9.	SELECT last_name,COUNT(*) as count FROM actor GROUP BY last_name HAVING count > 1 ORDER BY count DESC;
+10.	
+11.	
+12.	
+13.	
+14.	SELECT AVG(length) FROM film;
+15.	SELECT category, AVG(length) AS AverageLen FROM film_list GROUP BY category;
+16.	SELECT title, description FROM film_list WHERE description LIKE '%_obot%';
+17.	SELECT title FROM film WHERE length = (SELECT MAX(length) FROM film);
+18.	SELECT COUNT(release_year) as 2010_Releases FROM film WHERE release_year = 2010;
+19.	SELECT title, category FROM film_list WHERE category = 'HORROR';
+20.	SELECT title, actors FROM film_list WHERE actors LIKE '%Fred Costner%';
+21.	
+22.	SELECT DISTINCT country FROM country;
+a.	SELECT DISTINCT name FROM language ORDER BY name ASC;
+23.	SELECT first_name, last_name FROM actor WHERE last_name LIKE "%son%" ORDER BY first_name;
+24.	SELECT category,  COUNT(title) AS MoveNum FROM film_list GROUP BY category;
+25.	
+26.	
+
